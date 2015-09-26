@@ -14,7 +14,7 @@ using namespace std;
  * See this link for assembly instructions:
  *
  * www.nxtprograms.com/robot_arm/steps.html
- */ 
+ *
  * g++ -o robot_arm_psp robot_arm_psp.cpp -lrt -lm -L/usr/local/lib -lwiringPi -I../../Drivers
  *
  *********************************/

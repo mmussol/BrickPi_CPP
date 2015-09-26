@@ -13,7 +13,7 @@ using namespace std;
  * See this link for assembly instructions:
  *
  * www.nxtprograms.com/robot_arm/steps.html
- */
+ *
  * g++ -o robot_arm_simple robot_arm_simple.cpp -lrt -lm -L/usr/local/lib -lwiringPi -I../../Drivers
  *
  *********************************/
