@@ -28,7 +28,7 @@ typedef enum {
     SensorType_UltraSonicCont = 33,
     SensorType_UltraSonicSS = 34,
     SensorType_RcxLight = 35,
-    SensorType_ColorFull = 26,
+    SensorType_ColorFull = 36,
     SensorType_ColorRed = 37,
     SensorType_ColorGreen = 38,
     SensorType_ColorBlue = 39,
@@ -208,23 +208,23 @@ void BrickPi_Sensor::getBits(BrickPi_Msg *msg)
                 }
             }
         }
-    }
-#if 0 // TODO : untested
-      else if (type == SensorType_Touch) {
-        value = msg->getBits(1);
-    } else if (type == SensorType_UltraSonicCont ||
-               type == SensorType_UltraSonicSS) {
-        value = msg->getBits(8);
     } else if (type == SensorType_ColorFull) {
         value = msg->getBits(3);
         values[INDEX_BLANK] = msg->getBits(10);
         values[INDEX_RED] = msg->getBits(10);
         values[INDEX_GREEN] = msg->getBits(10);
         values[INDEX_BLUE] = msg->getBits(10);
+#if 0 // TODO : untested
+    }
+      else if (type == SensorType_Touch) {
+        value = msg->getBits(1);
+    } else if (type == SensorType_UltraSonicCont ||
+               type == SensorType_UltraSonicSS) {
+        value = msg->getBits(8);
+#endif
     } else {
         value = msg->getBits(10);
     }
-#endif
 }
 
 #endif // __BrickPi_Sensor_h_
